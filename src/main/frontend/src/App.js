@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import ContextDemo from './ContextDemo';
+import LocaleContext from './LocaleContext';
+import Login from './Login';
+import { useStateValue } from './StateProvider';
+import React, { useState } from 'react';
 
 function App() {
+  const [state,dispatch]=useStateValue();
+
+  const [locState, setlocState] = useState({locale:"en"}); 
+  console.log(locState.locale)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>This is react Use Context demo setup</h1>
+      <h3>
+        {state.user ? `Logged in as ${state.user}`:"No user Logged In"}
+      </h3>
+      <Login/>
+      <LocaleContext.Provider value={locState.locale}>
+      <ContextDemo/>
+      </LocaleContext.Provider>
+    
     </div>
   );
 }
