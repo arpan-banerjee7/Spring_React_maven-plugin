@@ -4,15 +4,11 @@ import ConsumeContext from './ConsumeContext';
 function ContextDemo(){
 
     return (
-    
     <LocaleContext.Consumer>
     {(value)=>
-    
     <ConsumeContext locale={value}/>
-    
     }
     </LocaleContext.Consumer>
-    
     )
 };
 

@@ -2,6 +2,7 @@ import './App.css';
 import ContextDemo from './ContextDemo';
 import LocaleContext from './LocaleContext';
 import Login from './Login';
+import TestUseReducer from './TestUseReducerHook';
 import { useStateValue } from './StateProvider';
 import React, { useState } from 'react';
 
@@ -20,6 +21,8 @@ function App() {
       <LocaleContext.Provider value={locState.locale}>
       <ContextDemo/>
       </LocaleContext.Provider>
+      <hr/>
+      <TestUseReducer/>
     
     </div>
   );

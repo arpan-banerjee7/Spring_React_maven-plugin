@@ -4,6 +4,7 @@ import { useStateValue } from './StateProvider';
 
 function Login() {
     const [state, dispatch]= useStateValue();
+    // const [state, dispatch]= React.useContext(StateContext);
     const loginToApp=()=>{
             dispatch({
                 type:"SET_USER",
