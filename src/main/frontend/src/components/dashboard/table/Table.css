@@ -1,0 +1,4 @@
+.rtable{
+    display:flex;
+    flex-direction: column;
+}

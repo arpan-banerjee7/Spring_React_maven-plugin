@@ -1,30 +1,27 @@
-import './App.css';
-import ContextDemo from './ContextDemo';
-import LocaleContext from './LocaleContext';
-import Login from './Login';
-import TestUseReducer from './TestUseReducerHook';
-import { useStateValue } from './StateProvider';
-import React, { useState } from 'react';
+import "./App.css";
+import React, { useState } from "react";
+import Sidebar from "./components/sidebar/Sidebar";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Routes } from "./components/routes/Routes";
+import Header from "./components/header/Header";
 
 function App() {
-  const [state,dispatch]=useStateValue();
-
-  const [locState, setlocState] = useState({locale:"en"}); 
-  console.log(locState.locale)
   return (
-    <div>
-      <h1>This is react Use Context demo setup</h1>
-      <h3>
-        {state.user ? `Logged in as ${state.user}`:"No user Logged In"}
-      </h3>
-      <Login/>
-      <LocaleContext.Provider value={locState.locale}>
-      <ContextDemo/>
-      </LocaleContext.Provider>
-      <hr/>
-      <TestUseReducer/>
-    
-    </div>
+    <Router>
+      {/* bem naming convention */}
+      <div className="app">
+        <div className="app_header">
+          <Header />
+        </div>
+
+        <div className="app_body">
+          <Sidebar />
+          <div className="app_main_content">
+            <Routes />
+          </div>
+        </div>
+      </div>
+    </Router>
   );
 }
 

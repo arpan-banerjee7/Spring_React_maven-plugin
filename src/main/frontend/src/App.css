@@ -1,0 +1,27 @@
+* {
+    margin: 0px;
+}
+
+.app_body {
+    display: flex;
+}
+.app_header {
+    display: flex;
+    justify-content: left;
+    background-color: #F8F9FA;
+    color: #357EBD;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    overflow-y: overlay;
+    flex: 0.8;
+    color: rgb(15, 15, 15);
+  }
+  
+  .app_main_content{
+    margin-top:20px;
+  }
