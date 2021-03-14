@@ -3,32 +3,57 @@
     flex-direction: column;
     justify-content: left;
     height: 100vh;
-    flex: 0.2;
     margin-right: 10px;
     font-size: 20px;
-    font-weight: 600;
-    color: #357EBD;
     background-color: #F8F9FA;
+    border-right: 1px solid  rgb(233, 223, 223);
+    border-top:1px thin;
     
 }
 
-.sidebar > ul {
-    list-style: none;
-    margin: 0px 10px;
-    padding: 5px;
-    display: block;
+.sidebar_item{
+    margin:0px 0px 0px 5px;
+    display:flex;
+    flex-grow: initial;
+    align-items: center;
+    cursor: pointer;
+    transition: 200ms color ease-in;
 }
 
-.list{
+.sidebar_item:hover{
+    text-decoration: underline;
+    background-color: #006BA1;
+    flex-grow: initial;
+    color: whitesmoke;
+}
+.sidebar_item.active > a{
+    text-decoration: underline;
+    color: whitesmoke ;
+}
+
+.sidebar_item > a{
     text-decoration: none;
     color: #006BA1;
     display:block;
+    padding:10px;
+    font-size:1.1rem;
 }
 
-.list:hover{
-    text-decoration: none;
-    background-color: #006BA1;
-    color: whitesmoke;
-    display:block;
+.sidebar_item > a:hover{
+    padding:10px;
+    text-decoration: underline;
+    color: whitesmoke ;
+   
 }
 
+.linechart_icon{
+    color: #006BA1;
+}
+
+.MuiSvgIcon-root{
+    color: #006BA1;
+}
+
+.MuiSvgIcon-root:hover{
+    color: whitesmoke ;
+}

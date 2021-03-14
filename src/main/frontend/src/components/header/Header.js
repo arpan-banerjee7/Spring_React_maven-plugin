@@ -4,7 +4,7 @@ import "./Header.css";
 function Header() {
   return (
     <div className="header">
-      <div className="header_band"> React Table and Chart </div>
+      <div className="header_brand"> React Table and Chart </div>
     </div>
   );
 }

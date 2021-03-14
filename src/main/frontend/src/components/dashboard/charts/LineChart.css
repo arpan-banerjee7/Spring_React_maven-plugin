@@ -1,5 +1,4 @@
-.rtable{
+.linechart{
     display:flex;
     flex-direction: column;
-    flex-grow: initial;
 }

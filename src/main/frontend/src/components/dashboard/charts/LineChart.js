@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import "./LineChart.css";
 
 function LineChart() {
-    return (
-        <div>
-           <h1>Line Chart</h1> 
-        </div>
-    )
+  return (
+    <div className="linechart">
+      <h1>Line Chart</h1>
+    </div>
+  );
 }
 
-export default LineChart
+export default LineChart;
